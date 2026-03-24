@@ -1,0 +1,49 @@
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+require 'phpmailer/src/Exception.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $company = $_POST["company"];
+    $message = $_POST["message"];
+
+    $mail = new PHPMailer(true);
+
+    try {
+        // DEBUG (poți să-l ștergi după ce merge)
+        $mail->SMTPDebug = 0;
+
+        // CONFIG GMAIL SMTP
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+
+        $mail->Username = 'autobot.innovations@gmail.com';
+        $mail->Password = 'jmuhcbrvomxktrln'; 
+
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+
+        // EMAIL
+        $mail->setFrom('autobot.innovations@gmail.com', 'AutoBot');
+        $mail->addAddress($email, $name);
+
+        $mail->Subject = 'Mesaj primit';
+        $mail->Body = "Salut $name,\n\nAm primit mesajul tau:\n$message\n\nTe vom contacta curand.";
+
+        $mail->send();
+
+        echo "EMAIL TRIMIS CU SUCCES!";
+
+    } catch (Exception $e) {
+        echo "Eroare: {$mail->ErrorInfo}";
+    }
+}
+?>
