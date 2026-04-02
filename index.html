@@ -4,31 +4,48 @@
   <meta name="google-site-verification" content="wydNU-AOrADamdnpTrK8KLmUXD3JbW2ML7V_ylEFzzg" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AutoBot Innovations | Automatizări AI pentru afaceri</title>
+  <title>NexWeb Studio | Creare site-uri moderne pentru afaceri</title>
   <meta
     name="description"
-    content="AutoBot Innovations creează sisteme moderne de automatizare AI, chatbot-uri, fluxuri email și sisteme de programări pentru afaceri."
+    content="Creăm site-uri moderne, rapide și profesionale pentru afaceri. Alege unul dintre pachetele Basic, Standard sau Premium și cere o ofertă direct pe WhatsApp."
   />
 
   <style>
     :root {
-      --bg: #050505;
-      --bg-soft: #0d0d0d;
-      --card: #111111;
-      --card-2: #171717;
-      --line: rgba(255, 255, 255, 0.08);
-      --line-strong: rgba(255, 255, 255, 0.16);
-      --text: #ffffff;
-      --muted: #c6c6c6;
-      --muted-2: #9d9d9d;
-      --accent: #ffffff;
-      --accent-dark: #050505;
-      --success: #22c55e;
-      --danger: #ef4444;
-      --shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+      --bg: #f5f7fb;
+      --bg-soft: #ffffff;
+      --card: #ffffff;
+      --card-2: #f0f3f9;
+      --line: rgba(15, 23, 42, 0.08);
+      --line-strong: rgba(15, 23, 42, 0.16);
+      --text: #172033;
+      --muted: #5f6b85;
+      --muted-2: #7d879c;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --accent-dark: #ffffff;
+      --success: #16a34a;
+      --shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
       --radius: 18px;
       --radius-lg: 24px;
       --max: 1220px;
+    }
+
+    body.dark-theme {
+      --bg: #0f172a;
+      --bg-soft: #111c33;
+      --card: #16213b;
+      --card-2: #1b2947;
+      --line: rgba(255, 255, 255, 0.08);
+      --line-strong: rgba(255, 255, 255, 0.15);
+      --text: #eef4ff;
+      --muted: #b8c2d9;
+      --muted-2: #8fa0bf;
+      --accent: #60a5fa;
+      --accent-hover: #3b82f6;
+      --accent-dark: #08111f;
+      --success: #22c55e;
+      --shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
     }
 
     * {
@@ -45,10 +62,11 @@
     body {
       font-family: Arial, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.05), transparent 30%),
-        radial-gradient(circle at top right, rgba(255,255,255,0.03), transparent 25%),
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 30%),
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.05), transparent 25%),
         var(--bg);
       color: var(--text);
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     a {
@@ -58,7 +76,8 @@
 
     button,
     input,
-    textarea {
+    textarea,
+    select {
       font-family: inherit;
     }
 
@@ -74,14 +93,17 @@
       padding: 0 20px;
     }
 
-    /* HEADER */
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(5, 5, 5, 0.9);
+      background: rgba(255, 255, 255, 0.82);
       border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
+    }
+
+    body.dark-theme header {
+      background: rgba(15, 23, 42, 0.88);
     }
 
     .navbar {
@@ -136,10 +158,9 @@
       gap: 12px;
     }
 
-    .cart-button {
-      position: relative;
+    .theme-toggle {
       border: 1px solid var(--line);
-      background: #0d0d0d;
+      background: var(--bg-soft);
       color: var(--text);
       border-radius: 999px;
       padding: 12px 16px;
@@ -151,36 +172,14 @@
       transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     }
 
-    .cart-button:hover {
+    .theme-toggle:hover {
       transform: translateY(-1px);
       border-color: var(--line-strong);
-      background: #131313;
     }
 
-    .cart-count {
-      min-width: 24px;
-      height: 24px;
-      padding: 0 7px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: var(--accent-dark);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    /* HERO */
     .hero {
       position: relative;
       padding: 130px 0 110px;
-      background:
-        linear-gradient(rgba(5, 5, 5, 0.72), rgba(5, 5, 5, 0.86)),
-        url("background.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
       overflow: hidden;
     }
 
@@ -208,8 +207,8 @@
       padding: 10px 16px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-      color: #f3f3f3;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--accent);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 1.4px;
@@ -224,7 +223,7 @@
 
     .hero p {
       font-size: 18px;
-      color: #dfdfdf;
+      color: var(--muted);
       max-width: 780px;
       margin: 0 auto 32px;
       line-height: 1.75;
@@ -239,11 +238,8 @@
 
     .btn,
     .secondary-btn,
-    .purchase-type-btn,
     .offer-btn,
-    .lead-submit-btn,
-    .cart-checkout-btn,
-    .cart-clear-btn {
+    .lead-submit-btn {
       border: none;
       cursor: pointer;
       transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease, border-color 0.25s ease;
@@ -251,8 +247,7 @@
 
     .btn,
     .offer-btn,
-    .lead-submit-btn,
-    .cart-checkout-btn {
+    .lead-submit-btn {
       background: var(--accent);
       color: var(--accent-dark);
       padding: 14px 24px;
@@ -261,9 +256,14 @@
       font-weight: 700;
     }
 
-    .secondary-btn,
-    .purchase-type-btn,
-    .cart-clear-btn {
+    .btn:hover,
+    .offer-btn:hover,
+    .lead-submit-btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .secondary-btn {
       background: transparent;
       color: var(--text);
       padding: 14px 24px;
@@ -273,18 +273,11 @@
       font-weight: 700;
     }
 
-    .btn:hover,
-    .secondary-btn:hover,
-    .purchase-type-btn:hover,
-    .offer-btn:hover,
-    .lead-submit-btn:hover,
-    .cart-checkout-btn:hover,
-    .cart-clear-btn:hover {
+    .secondary-btn:hover {
       transform: translateY(-2px);
       opacity: 0.95;
     }
 
-    /* SECTIONS */
     .section {
       padding: 90px 0;
     }
@@ -309,16 +302,15 @@
       font-size: 17px;
     }
 
-    /* FEATURE CARDS */
     .services {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
       margin-top: 34px;
     }
 
     .card {
-      background: linear-gradient(180deg, #121212, #0d0d0d);
+      background: linear-gradient(180deg, var(--card), var(--card-2));
       padding: 26px;
       border-radius: var(--radius);
       border: 1px solid var(--line);
@@ -339,7 +331,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255,255,255,0.06);
+      background: rgba(37, 99, 235, 0.08);
       border: 1px solid var(--line);
       margin-bottom: 18px;
       font-size: 22px;
@@ -357,29 +349,6 @@
       margin: 0;
     }
 
-    /* PACKAGE SWITCHER */
-    .purchase-switcher {
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      flex-wrap: wrap;
-      margin: 38px 0 34px;
-    }
-
-    .purchase-type-btn.active {
-      background: var(--accent);
-      color: var(--accent-dark);
-      border-color: transparent;
-    }
-
-    .offers-wrapper {
-      display: none;
-    }
-
-    .offers-wrapper.active {
-      display: block;
-    }
-
     .offers {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -387,7 +356,7 @@
     }
 
     .offer-card {
-      background: linear-gradient(180deg, #121212 0%, #0d0d0d 100%);
+      background: linear-gradient(180deg, var(--card) 0%, var(--card-2) 100%);
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       padding: 30px 26px;
@@ -398,7 +367,7 @@
     }
 
     .offer-card.featured {
-      border-color: rgba(255,255,255,0.22);
+      border-color: rgba(37, 99, 235, 0.28);
       transform: scale(1.01);
     }
 
@@ -424,6 +393,7 @@
       font-size: 32px;
       font-weight: 700;
       margin-bottom: 18px;
+      color: var(--accent);
     }
 
     .offer-desc {
@@ -440,7 +410,7 @@
     }
 
     .offer-features li {
-      color: #e8e8e8;
+      color: var(--text);
       font-size: 14px;
       line-height: 1.65;
       margin-bottom: 10px;
@@ -453,7 +423,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      color: #ffffff;
+      color: var(--accent);
       font-weight: 700;
     }
 
@@ -463,18 +433,11 @@
       flex-wrap: wrap;
     }
 
-    .offer-btn.secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--line);
-    }
-
-    /* ABOUT / CONTACT */
     .about-box,
     .contact-box {
       max-width: 920px;
       margin: 0 auto;
-      background: linear-gradient(180deg, #101010, #0b0b0b);
+      background: linear-gradient(180deg, var(--card), var(--card-2));
       border: 1px solid var(--line);
       border-radius: 26px;
       padding: 34px;
@@ -497,7 +460,7 @@
     }
 
     .contact-item {
-      background: rgba(255,255,255,0.03);
+      background: rgba(37, 99, 235, 0.04);
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 20px;
@@ -518,13 +481,12 @@
       word-break: break-word;
     }
 
-    /* LEAD FORM */
     .contact-lead-section {
       padding: 10px 0 90px;
     }
 
     .lead-box {
-      background: linear-gradient(180deg, #111111, #0c0c0c);
+      background: linear-gradient(180deg, var(--card), var(--card-2));
       border: 1px solid var(--line);
       border-radius: 28px;
       padding: 34px;
@@ -544,7 +506,7 @@
     .lead-kicker {
       display: inline-block;
       margin-bottom: 18px;
-      color: #ffffff;
+      color: var(--accent);
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 2px;
@@ -583,7 +545,7 @@
     .lead-form textarea,
     .lead-form select {
       width: 100%;
-      background: #070707;
+      background: var(--bg-soft);
       border: 1px solid var(--line);
       color: var(--text);
       padding: 18px 20px;
@@ -612,8 +574,8 @@
     .lead-form input:focus,
     .lead-form textarea:focus,
     .lead-form select:focus {
-      border-color: rgba(255,255,255,0.20);
-      box-shadow: 0 0 0 4px rgba(255,255,255,0.03);
+      border-color: rgba(37, 99, 235, 0.35);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
     }
 
     .lead-submit-btn {
@@ -623,164 +585,17 @@
       font-size: 16px;
     }
 
-    .hidden-honeypot {
-      display: none;
-    }
-
-    /* CART DRAWER */
-    .cart-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.52);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
-      z-index: 1200;
-    }
-
-    .cart-overlay.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .cart-drawer {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: min(420px, 100%);
-      height: 100vh;
-      background: #0b0b0b;
-      border-left: 1px solid var(--line);
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-      z-index: 1300;
-      display: flex;
-      flex-direction: column;
-      box-shadow: -10px 0 40px rgba(0,0,0,0.35);
-    }
-
-    .cart-drawer.active {
-      transform: translateX(0);
-    }
-
-    .cart-header {
-      padding: 22px 22px 16px;
-      border-bottom: 1px solid var(--line);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .cart-header h3 {
-      margin: 0;
-      font-size: 22px;
-    }
-
-    .cart-close {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 1px solid var(--line);
-      background: transparent;
-      color: var(--text);
-      cursor: pointer;
-      font-size: 20px;
-    }
-
-    .cart-body {
-      flex: 1;
-      overflow-y: auto;
-      padding: 18px 22px;
-    }
-
-    .cart-empty {
-      color: var(--muted);
-      line-height: 1.7;
-      margin-top: 16px;
-    }
-
-    .cart-item {
-      border: 1px solid var(--line);
-      background: #111111;
-      border-radius: 18px;
-      padding: 18px;
-      margin-bottom: 14px;
-    }
-
-    .cart-item-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      align-items: start;
-    }
-
-    .cart-item h4 {
-      margin: 0 0 6px;
-      font-size: 17px;
-    }
-
-    .cart-item p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
-    .cart-item-price {
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .cart-remove {
-      margin-top: 14px;
-      background: transparent;
-      color: #ffb4b4;
-      border: 1px solid rgba(239, 68, 68, 0.18);
-      border-radius: 999px;
-      padding: 10px 14px;
-      cursor: pointer;
-      font-weight: 700;
-    }
-
-    .cart-footer {
-      border-top: 1px solid var(--line);
-      padding: 18px 22px 24px;
-      background: #0b0b0b;
-    }
-
-    .cart-total {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .cart-footer-buttons {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    /* FOOTER */
     .footer {
       text-align: center;
       padding: 28px 20px;
-      background: #080808;
+      background: transparent;
       border-top: 1px solid var(--line);
       color: var(--muted);
       margin-top: 20px;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 1100px) {
-      .services {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
+      .services,
       .offers {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -811,7 +626,6 @@
 
       .hero {
         padding: 110px 0 90px;
-        background-position: center right;
       }
 
       .hero h1 {
@@ -859,30 +673,27 @@
       .lead-left h2 {
         font-size: 32px;
       }
-
-      .cart-footer-buttons {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
-<body>
+<body class="dark-theme">
 
   <header>
     <div class="container navbar">
-      <div class="logo">AUTOBOT INNOVATIONS</div>
+      <div class="logo">NEXWEB STUDIO</div>
 
       <nav class="nav-center" aria-label="Navigare principală">
         <button class="nav-link" onclick="goToSection('acasa')">ACASĂ</button>
+        <button class="nav-link" onclick="goToSection('servicii')">SERVICII</button>
         <button class="nav-link" onclick="goToSection('pachete')">PACHETE</button>
-        <button class="nav-link" onclick="goToSection('despre')">DESPRE NOI</button>
-        <button class="nav-link" onclick="goToSection('contact')">CONTACT</button>
+        <button class="nav-link" onclick="goToSection('despre')">DESPRE</button>
+        <button class="nav-link" onclick="goToSection('formular')">OFERTĂ</button>
       </nav>
 
       <div class="nav-right">
-        <button class="cart-button" onclick="toggleCart()" aria-label="Deschide coșul de cumpărături">
-          🛒 Coș
-          <span class="cart-count" id="cart-count">0</span>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Schimbă tema">
+          <span id="theme-icon">☀️</span>
+          <span id="theme-text">Light</span>
         </button>
       </div>
     </div>
@@ -890,66 +701,55 @@
 
   <section class="hero" id="acasa">
     <div class="hero-content">
-      <span class="hero-badge">Automatizări AI moderne pentru afaceri</span>
-      <h1>Automatizează procesele repetitive și crește mai rapid cu sisteme inteligente</h1>
+      <span class="hero-badge">Creare site-uri moderne pentru afaceri</span>
+      <h1>Construiesc site-uri profesionale, clare și moderne pentru afacerea ta</h1>
       <p>
-        AutoBot Innovations construiește soluții moderne de automatizare pentru afaceri:
-        chatbot-uri AI, fluxuri automate de email, sisteme de programări și procese digitale
-        care economisesc timp și îmbunătățesc relația cu clienții.
+        Dacă ai nevoie de un site de prezentare, un site pentru servicii sau o pagină modernă
+        pentru brandul tău, te pot ajuta cu un design curat, aspect profesional și structură bine gândită.
       </p>
 
       <div class="hero-actions">
         <button class="btn" onclick="goToSection('pachete')">Vezi pachetele</button>
-        <button class="secondary-btn" onclick="goToSection('formular')">Solicită o ofertă</button>
+        <button class="secondary-btn" onclick="goToSection('formular')">Cere ofertă</button>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="servicii">
     <div class="container">
       <div class="section-heading">
-        <h2>Serviciile noastre</h2>
+        <h2>Ce ofer</h2>
         <p class="section-subtext">
-          Creăm sisteme digitale clare, profesionale și ușor de folosit, astfel încât
-          afacerea ta să răspundă mai repede, să fie mai bine organizată și să scaleze
-          fără efort manual inutil.
+          Realizez site-uri cu un aspect modern, ușor de folosit, adaptate pentru telefon,
+          tabletă și desktop, astfel încât afacerea ta să arate profesionist în online.
         </p>
       </div>
 
       <div class="services">
         <div class="card">
-          <div class="card-icon">🤖</div>
-          <h3>Chatbot-uri AI</h3>
+          <div class="card-icon">💻</div>
+          <h3>Site de prezentare</h3>
           <p>
-            Răspunsuri rapide pentru clienți, calificarea lead-urilor și suport automat 24/7
-            pentru o experiență modernă și eficientă.
+            Ideal pentru firme, servicii, portofolii sau afaceri locale care au nevoie
+            de o prezență online serioasă și clară.
           </p>
         </div>
 
         <div class="card">
-          <div class="card-icon">✉️</div>
-          <h3>Automatizare Email</h3>
+          <div class="card-icon">📱</div>
+          <h3>Design responsive</h3>
           <p>
-            Transformă lead-urile reci în conversații reale prin secvențe automate,
-            follow-up inteligent și mesaje trimise la momentul potrivit.
+            Site-ul va arăta bine pe telefon, tabletă și calculator, pentru o experiență
+            plăcută indiferent de dispozitiv.
           </p>
         </div>
 
         <div class="card">
-          <div class="card-icon">📅</div>
-          <h3>Programări</h3>
+          <div class="card-icon">⚡</div>
+          <h3>Aspect modern</h3>
           <p>
-            Permite clienților să își facă programări rapid, fără întârzieri, confuzii
-            sau schimburi inutile de mesaje.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">⚙️</div>
-          <h3>Sisteme de booking</h3>
-          <p>
-            Organizează mai bine procesele interne ale afacerii tale printr-un sistem
-            de rezervări mai clar, stabil și eficient.
+            Pun accent pe simplitate, culori plăcute, structură curată și un design
+            profesional care inspiră încredere.
           </p>
         </div>
       </div>
@@ -961,139 +761,65 @@
       <div class="section-heading">
         <h2>Pachete</h2>
         <p class="section-subtext">
-          Alege varianta potrivită pentru afacerea ta: implementare unică sau abonament
-          lunar pentru mentenanță, optimizare și suport continuu.
+          Alege varianta potrivită pentru nevoile tale. De la un site simplu până la
+          o prezentare completă și mai premium.
         </p>
       </div>
 
-      <div class="purchase-switcher">
-        <button class="purchase-type-btn active" id="btn-one-time" onclick="showOffers('one-time')">
-          Achiziție unică
-        </button>
-        <button class="purchase-type-btn" id="btn-monthly" onclick="showOffers('monthly')">
-          Abonament lunar
-        </button>
-      </div>
-
-      <div class="offers-wrapper active" id="one-time">
-        <div class="offers">
-          <div class="offer-card">
-            <h3>Standard</h3>
-            <div class="offer-price">299$</div>
-            <p class="offer-desc">
-              Ideal pentru afacerile care vor un început profesionist în automatizare.
-            </p>
-            <ul class="offer-features">
-              <li>Chatbot de bază pentru întrebări frecvente</li>
-              <li>Integrare formular de contact</li>
-              <li>Structură simplă de automatizare</li>
-              <li>Configurare inițială rapidă</li>
-            </ul>
-            <div class="offer-actions">
-              <button
-                class="offer-btn"
-                onclick="addToCart('Standard - Achiziție unică', 299, 'Implementare inițială pentru automatizare de bază.')"
-              >
-                Adaugă în coș
-              </button>
-              <button class="offer-btn secondary" onclick="goToSection('formular')">Solicită</button>
-            </div>
-          </div>
-
-          <div class="offer-card featured">
-            <h3>Premium</h3>
-            <div class="offer-price">599$</div>
-            <p class="offer-desc">
-              Soluție mai avansată pentru business-uri care vor mai mult control și eficiență.
-            </p>
-            <ul class="offer-features">
-              <li>Fluxuri automate mai complexe</li>
-              <li>Integrare sistem de booking</li>
-              <li>Setare personalizată pentru afacerea ta</li>
-              <li>Suport prioritar la implementare</li>
-            </ul>
-            <div class="offer-actions">
-              <button
-                class="offer-btn"
-                onclick="addToCart('Premium - Achiziție unică', 599, 'Pachet complet pentru automatizare avansată și integrare booking.')"
-              >
-                Adaugă în coș
-              </button>
-              <button class="offer-btn secondary" onclick="goToSection('formular')">Solicită</button>
-            </div>
+      <div class="offers">
+        <div class="offer-card">
+          <h3>Basic</h3>
+          <div class="offer-price">400€</div>
+          <p class="offer-desc">
+            Potrivit pentru cine are nevoie de un site simplu, curat și profesional.
+          </p>
+          <ul class="offer-features">
+            <li>1-3 pagini</li>
+            <li>Design modern și aerisit</li>
+            <li>Versiune responsive</li>
+            <li>Secțiune de contact</li>
+            <li>Livrare rapidă</li>
+          </ul>
+          <div class="offer-actions">
+            <button class="offer-btn" onclick="selectPackage('Basic')">Alege pachetul</button>
           </div>
         </div>
-      </div>
 
-      <div class="offers-wrapper" id="monthly">
-        <div class="offers">
-          <div class="offer-card">
-            <h3>Start</h3>
-            <div class="offer-price">49$ / lună</div>
-            <p class="offer-desc">
-              Pachet potrivit pentru afaceri mici care au nevoie de suport esențial.
-            </p>
-            <ul class="offer-features">
-              <li>Mentenanță ușoară</li>
-              <li>Actualizări de bază</li>
-              <li>Asistență pentru sistemul existent</li>
-              <li>Optimizări minime lunare</li>
-            </ul>
-            <div class="offer-actions">
-              <button
-                class="offer-btn"
-                onclick="addToCart('Start - Abonament lunar', 49, 'Suport lunar de bază pentru automatizări esențiale.')"
-              >
-                Adaugă în coș
-              </button>
-              <button class="offer-btn secondary" onclick="goToSection('formular')">Solicită</button>
-            </div>
+        <div class="offer-card featured">
+          <h3>Standard</h3>
+          <div class="offer-price">700€</div>
+          <p class="offer-desc">
+            Varianta recomandată pentru afaceri care vor un site mai complet și mai bine structurat.
+          </p>
+          <ul class="offer-features">
+            <li>4-6 pagini</li>
+            <li>Design personalizat</li>
+            <li>Responsive pe toate dispozitivele</li>
+            <li>Formular de contact</li>
+            <li>Structură mai profesionistă</li>
+            <li>Optimizare vizuală mai bună</li>
+          </ul>
+          <div class="offer-actions">
+            <button class="offer-btn" onclick="selectPackage('Standard')">Alege pachetul</button>
           </div>
+        </div>
 
-          <div class="offer-card featured">
-            <h3>Standard</h3>
-            <div class="offer-price">99$ / lună</div>
-            <p class="offer-desc">
-              Creat pentru business-uri în creștere care au nevoie de mentenanță și optimizare.
-            </p>
-            <ul class="offer-features">
-              <li>Întreținere regulată</li>
-              <li>Automatizări mai solide</li>
-              <li>Comunicare mai bună cu clienții</li>
-              <li>Actualizări și ajustări periodice</li>
-            </ul>
-            <div class="offer-actions">
-              <button
-                class="offer-btn"
-                onclick="addToCart('Standard - Abonament lunar', 99, 'Mentenanță și optimizare lunară pentru afaceri în dezvoltare.')"
-              >
-                Adaugă în coș
-              </button>
-              <button class="offer-btn secondary" onclick="goToSection('formular')">Solicită</button>
-            </div>
-          </div>
-
-          <div class="offer-card">
-            <h3>Premium</h3>
-            <div class="offer-price">199$ / lună</div>
-            <p class="offer-desc">
-              Pachet complet pentru suport constant, fluxuri avansate și personalizare extinsă.
-            </p>
-            <ul class="offer-features">
-              <li>Fluxuri complexe de automatizare</li>
-              <li>Asistență prioritară</li>
-              <li>Sisteme email și booking</li>
-              <li>Personalizare mai profundă</li>
-            </ul>
-            <div class="offer-actions">
-              <button
-                class="offer-btn"
-                onclick="addToCart('Premium - Abonament lunar', 199, 'Suport complet lunar cu personalizare avansată.')"
-              >
-                Adaugă în coș
-              </button>
-              <button class="offer-btn secondary" onclick="goToSection('formular')">Solicită</button>
-            </div>
+        <div class="offer-card">
+          <h3>Premium</h3>
+          <div class="offer-price">1200€</div>
+          <p class="offer-desc">
+            Pentru cei care vor un site complet, cu imagine premium și atenție la detalii.
+          </p>
+          <ul class="offer-features">
+            <li>6+ pagini</li>
+            <li>Design premium</li>
+            <li>Responsive complet</li>
+            <li>Formular personalizat</li>
+            <li>Secțiuni speciale la cerere</li>
+            <li>Prioritate la modificări</li>
+          </ul>
+          <div class="offer-actions">
+            <button class="offer-btn" onclick="selectPackage('Premium')">Alege pachetul</button>
           </div>
         </div>
       </div>
@@ -1103,24 +829,21 @@
   <section class="section" id="despre">
     <div class="container">
       <div class="section-heading">
-        <h2>Despre noi</h2>
+        <h2>Despre mine</h2>
       </div>
 
       <div class="about-box">
         <p>
-          AutoBot Innovations a fost creat pentru a ajuta afacerile să lucreze mai inteligent,
-          nu mai greu. Construim soluții practice de automatizare și inteligență artificială
-          care reduc sarcinile repetitive și îmbunătățesc experiența clienților.
+          Mă ocup de crearea site-urilor pentru persoane, branduri și afaceri care vor
+          să arate profesionist în mediul online.
         </p>
         <p>
-          Scopul nostru este să oferim sisteme moderne, eficiente și ușor de folosit.
-          În loc să pierzi ore întregi în operațiuni repetitive, poți folosi automatizarea
-          pentru a te concentra pe creștere, performanță și rezultate reale.
+          Scopul meu este să construiesc pagini clare, moderne și plăcute vizual,
+          fără elemente exagerate, astfel încât site-ul să inspire încredere și să fie ușor de folosit.
         </p>
         <p>
-          Credem că sistemele profesionale construiesc afaceri profesionale. De aceea,
-          dezvoltăm instrumente care economisesc timp, îmbunătățesc comunicarea și susțin
-          dezvoltarea pe termen lung.
+          Fie că ai nevoie de un site simplu de prezentare sau de o variantă mai completă,
+          pot adapta structura în funcție de ceea ce ai nevoie.
         </p>
       </div>
     </div>
@@ -1131,29 +854,28 @@
       <div class="section-heading">
         <h2>Contact</h2>
         <p class="section-subtext">
-          Ești gata să automatizezi afacerea ta? Hai să construim sistemul potrivit pentru nevoile tale.
+          Dacă vrei un site pentru afacerea ta, discutăm direct și stabilim varianta potrivită.
         </p>
       </div>
 
       <div class="contact-box">
         <p>
-          Spune-ne ce pachet te interesează sau ce tip de automatizare vrei să implementezi,
-          iar noi îți vom răspunde cu o soluție clară și potrivită pentru business-ul tău.
+          Completează formularul de mai jos, iar cererea ta va fi trimisă direct pe WhatsApp.
         </p>
 
         <div class="contact-grid">
           <div class="contact-item">
-            <h4>Email</h4>
-            <p><a href="mailto:autobot.innovations@gmail.com">autobot.innovations@gmail.com</a></p>
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/40768917999" target="_blank">0768917999</a></p>
           </div>
 
           <div class="contact-item">
-            <h4>Telefon</h4>
-            <p><a href="tel:0768917999">0768917999</a></p>
+            <h4>Tip servicii</h4>
+            <p>Site-uri de prezentare, pagini pentru servicii, site-uri moderne pentru afaceri</p>
           </div>
 
           <div class="contact-item">
-            <h4>Program</h4>
+            <h4>Disponibilitate</h4>
             <p>Luni – Vineri • 09:00 – 18:00</p>
           </div>
         </div>
@@ -1165,54 +887,40 @@
     <div class="container">
       <div class="lead-box">
         <div class="lead-left">
-          <span class="lead-kicker">GATA SĂ LUCRĂM ÎMPREUNĂ?</span>
-          <h2>Afacerea ta merită sisteme inteligente, nu timp pierdut.</h2>
+          <span class="lead-kicker">VREI UN SITE PROFESIONAL?</span>
+          <h2>Trimite detaliile tale și discutăm direct pe WhatsApp</h2>
           <p>
-            Trimite-ne câteva detalii despre afacerea ta, iar noi îți vom arăta cum poate
-            arăta un sistem modern de automatizare și prezență online pentru serviciile tale.
+            Completează formularul, iar mesajul va fi pregătit automat și trimis către WhatsApp,
+            ca să putem discuta mai rapid despre proiectul tău.
           </p>
 
           <div class="lead-contact-info">
-            <p><strong>Email:</strong> autobot.innovations@gmail.com</p>
-            <p><strong>Telefon:</strong> 0768917999</p>
+            <p><strong>WhatsApp:</strong> 0768917999</p>
             <p><strong>Program:</strong> Luni – Vineri • 09:00 – 18:00</p>
           </div>
         </div>
 
         <div class="lead-right">
-          <form
-            name="autobot-contact"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            class="lead-form"
-          >
-            <input type="hidden" name="form-name" value="autobot-contact" />
+          <form class="lead-form" id="whatsapp-form">
+            <input type="text" id="name" placeholder="Numele tău" required />
+            <input type="email" id="email" placeholder="Adresa de email" required />
+            <input type="text" id="company" placeholder="Numele firmei / brandului" required />
 
-            <p class="hidden-honeypot">
-              <label>Nu completa acest câmp: <input name="bot-field" /></label>
-            </p>
-
-            <input type="text" name="name" placeholder="Numele tău" required />
-            <input type="email" name="email" placeholder="Adresa de email" required />
-            <input type="text" name="company" placeholder="Numele companiei" required />
-
-            <select name="interest" required>
-              <option value="">Selectează serviciul dorit</option>
-              <option value="Chatbot AI">Chatbot AI</option>
-              <option value="Automatizare Email">Automatizare Email</option>
-              <option value="Programări">Programări</option>
-              <option value="Sistem de booking">Sistem de booking</option>
-              <option value="Pachet personalizat">Pachet personalizat</option>
+            <select id="package" required>
+              <option value="">Selectează pachetul dorit</option>
+              <option value="Basic">Basic</option>
+              <option value="Standard">Standard</option>
+              <option value="Premium">Premium</option>
+              <option value="Nu sunt sigur încă">Nu sunt sigur încă</option>
             </select>
 
             <textarea
-              name="message"
-              placeholder="Spune-ne ce tip de automatizare sau website ai nevoie"
+              id="message"
+              placeholder="Scrie pe scurt ce fel de site îți dorești"
               required
             ></textarea>
 
-            <button type="submit" class="lead-submit-btn">Trimite cererea</button>
+            <button type="submit" class="lead-submit-btn">Trimite pe WhatsApp</button>
           </form>
         </div>
       </div>
@@ -1220,38 +928,10 @@
   </section>
 
   <div class="footer">
-    © 2026 AutoBot Innovations. Toate drepturile rezervate.
+    © 2026 NexWeb Studio. Toate drepturile rezervate.
   </div>
 
-  <!-- CART -->
-  <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
-
-  <aside class="cart-drawer" id="cart-drawer" aria-label="Coș de cumpărături">
-    <div class="cart-header">
-      <h3>Coșul tău</h3>
-      <button class="cart-close" onclick="closeCart()" aria-label="Închide coșul">×</button>
-    </div>
-
-    <div class="cart-body" id="cart-items">
-      <p class="cart-empty">Coșul este gol. Adaugă un pachet pentru a continua.</p>
-    </div>
-
-    <div class="cart-footer">
-      <div class="cart-total">
-        <span>Total</span>
-        <span id="cart-total">0$</span>
-      </div>
-
-      <div class="cart-footer-buttons">
-        <button class="cart-clear-btn" onclick="clearCart()">Golește coșul</button>
-        <button class="cart-checkout-btn" onclick="checkoutCart()">Trimite selecția</button>
-      </div>
-    </div>
-  </aside>
-
   <script>
-    const cart = [];
-
     function goToSection(sectionId) {
       const el = document.getElementById(sectionId);
       if (el) {
@@ -1259,118 +939,75 @@
       }
     }
 
-    function showOffers(type) {
-      const oneTime = document.getElementById("one-time");
-      const monthly = document.getElementById("monthly");
-      const btnOneTime = document.getElementById("btn-one-time");
-      const btnMonthly = document.getElementById("btn-monthly");
+    function toggleTheme() {
+      const body = document.body;
+      const themeIcon = document.getElementById("theme-icon");
+      const themeText = document.getElementById("theme-text");
 
-      oneTime.classList.remove("active");
-      monthly.classList.remove("active");
-      btnOneTime.classList.remove("active");
-      btnMonthly.classList.remove("active");
+      body.classList.toggle("dark-theme");
 
-      document.getElementById(type).classList.add("active");
-
-      if (type === "one-time") {
-        btnOneTime.classList.add("active");
+      if (body.classList.contains("dark-theme")) {
+        localStorage.setItem("theme", "dark");
+        themeIcon.textContent = "☀️";
+        themeText.textContent = "Light";
       } else {
-        btnMonthly.classList.add("active");
+        localStorage.setItem("theme", "light");
+        themeIcon.textContent = "🌙";
+        themeText.textContent = "Dark";
       }
     }
 
-    function toggleCart() {
-      document.getElementById("cart-drawer").classList.toggle("active");
-      document.getElementById("cart-overlay").classList.toggle("active");
-    }
+    function loadTheme() {
+      const savedTheme = localStorage.getItem("theme");
+      const themeIcon = document.getElementById("theme-icon");
+      const themeText = document.getElementById("theme-text");
 
-    function closeCart() {
-      document.getElementById("cart-drawer").classList.remove("active");
-      document.getElementById("cart-overlay").classList.remove("active");
-    }
-
-    function addToCart(name, price, description) {
-      cart.push({ name, price, description });
-      updateCartUI();
-      document.getElementById("cart-drawer").classList.add("active");
-      document.getElementById("cart-overlay").classList.add("active");
-    }
-
-    function removeFromCart(index) {
-      cart.splice(index, 1);
-      updateCartUI();
-    }
-
-    function clearCart() {
-      cart.length = 0;
-      updateCartUI();
-    }
-
-    function updateCartUI() {
-      const cartItems = document.getElementById("cart-items");
-      const cartCount = document.getElementById("cart-count");
-      const cartTotal = document.getElementById("cart-total");
-
-      cartCount.textContent = cart.length;
-
-      if (cart.length === 0) {
-        cartItems.innerHTML = '<p class="cart-empty">Coșul este gol. Adaugă un pachet pentru a continua.</p>';
-        cartTotal.textContent = "0$";
-        return;
+      if (savedTheme === "light") {
+        document.body.classList.remove("dark-theme");
+        themeIcon.textContent = "🌙";
+        themeText.textContent = "Dark";
+      } else {
+        document.body.classList.add("dark-theme");
+        themeIcon.textContent = "☀️";
+        themeText.textContent = "Light";
       }
-
-      let total = 0;
-
-      cartItems.innerHTML = cart
-        .map((item, index) => {
-          total += item.price;
-          return `
-            <div class="cart-item">
-              <div class="cart-item-top">
-                <div>
-                  <h4>${item.name}</h4>
-                  <p>${item.description}</p>
-                </div>
-                <div class="cart-item-price">${item.price}$</div>
-              </div>
-              <button class="cart-remove" onclick="removeFromCart(${index})">Șterge</button>
-            </div>
-          `;
-        })
-        .join("");
-
-      cartTotal.textContent = total + "$";
     }
 
-    function checkoutCart() {
-      if (cart.length === 0) {
-        alert("Coșul este gol. Adaugă cel puțin un pachet.");
-        return;
+    function selectPackage(packageName) {
+      const packageField = document.getElementById("package");
+      if (packageField) {
+        packageField.value = packageName;
       }
-
-      const selectedPlans = cart
-        .map((item, index) => `${index + 1}. ${item.name} - ${item.price}$`)
-        .join("\\n");
-
-      const messageBox = document.querySelector('textarea[name="message"]');
-      const interestBox = document.querySelector('select[name="interest"]');
-
-      if (messageBox) {
-        messageBox.value =
-`Bună! Sunt interesat(ă) de următoarele pachete:
-
-${selectedPlans}
-
-Aș dori mai multe detalii despre implementare, timp de livrare și pașii următori.`;
-      }
-
-      if (interestBox) {
-        interestBox.value = "Pachet personalizat";
-      }
-
-      closeCart();
       goToSection("formular");
     }
+
+    document.getElementById("whatsapp-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const company = document.getElementById("company").value.trim();
+      const selectedPackage = document.getElementById("package").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const whatsappMessage =
+`Bună! Mă interesează un site.
+
+Nume: ${name}
+Email: ${email}
+Firmă / Brand: ${company}
+Pachet ales: ${selectedPackage}
+
+Detalii proiect:
+${message}`;
+
+      const phoneNumber = "40768917999";
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+      window.open(whatsappURL, "_blank");
+    });
+
+    loadTheme();
   </script>
 </body>
 </html>
