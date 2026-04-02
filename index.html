@@ -4,10 +4,10 @@
   <meta name="google-site-verification" content="wydNU-AOrADamdnpTrK8KLmUXD3JbW2ML7V_ylEFzzg" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NexWeb Studio | Creare site-uri moderne pentru afaceri</title>
+  <title>AutoBot Innovations | Creare site-uri moderne pentru afaceri</title>
   <meta
     name="description"
-    content="Creăm site-uri moderne, rapide și profesionale pentru afaceri. Alege unul dintre pachetele Basic, Standard sau Premium și cere o ofertă direct pe WhatsApp."
+    content="AutoBot Innovations creează site-uri moderne, rapide și profesionale pentru afaceri. Alege unul dintre pachetele disponibile și cere o ofertă direct pe WhatsApp."
   />
 
   <style>
@@ -79,11 +79,6 @@
     textarea,
     select {
       font-family: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
     }
 
     .container {
@@ -351,7 +346,7 @@
 
     .offers {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
     }
 
@@ -390,7 +385,7 @@
     }
 
     .offer-price {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 700;
       margin-bottom: 18px;
       color: var(--accent);
@@ -594,9 +589,14 @@
       margin-top: 20px;
     }
 
-    @media (max-width: 1100px) {
-      .services,
+    @media (max-width: 1200px) {
       .offers {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .services {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -680,7 +680,7 @@
 
   <header>
     <div class="container navbar">
-      <div class="logo">NEXWEB STUDIO</div>
+      <div class="logo">AUTOBOT INNOVATIONS</div>
 
       <nav class="nav-center" aria-label="Navigare principală">
         <button class="nav-link" onclick="goToSection('acasa')">ACASĂ</button>
@@ -702,10 +702,10 @@
   <section class="hero" id="acasa">
     <div class="hero-content">
       <span class="hero-badge">Creare site-uri moderne pentru afaceri</span>
-      <h1>Construiesc site-uri profesionale, clare și moderne pentru afacerea ta</h1>
+      <h1>Noi construim site-uri profesionale, clare și moderne pentru afacerea ta</h1>
       <p>
         Dacă ai nevoie de un site de prezentare, un site pentru servicii sau o pagină modernă
-        pentru brandul tău, te pot ajuta cu un design curat, aspect profesional și structură bine gândită.
+        pentru brandul tău, noi te putem ajuta cu un design curat, aspect profesional și structură bine gândită.
       </p>
 
       <div class="hero-actions">
@@ -718,9 +718,9 @@
   <section class="section" id="servicii">
     <div class="container">
       <div class="section-heading">
-        <h2>Ce ofer</h2>
+        <h2>Ce oferim</h2>
         <p class="section-subtext">
-          Realizez site-uri cu un aspect modern, ușor de folosit, adaptate pentru telefon,
+          Noi realizăm site-uri cu un aspect modern, ușor de folosit, adaptate pentru telefon,
           tabletă și desktop, astfel încât afacerea ta să arate profesionist în online.
         </p>
       </div>
@@ -748,7 +748,7 @@
           <div class="card-icon">⚡</div>
           <h3>Aspect modern</h3>
           <p>
-            Pun accent pe simplitate, culori plăcute, structură curată și un design
+            Punem accent pe simplitate, culori plăcute, structură curată și un design
             profesional care inspiră încredere.
           </p>
         </div>
@@ -762,32 +762,31 @@
         <h2>Pachete</h2>
         <p class="section-subtext">
           Alege varianta potrivită pentru nevoile tale. De la un site simplu până la
-          o prezentare completă și mai premium.
+          o variantă complet personalizată.
         </p>
       </div>
 
       <div class="offers">
         <div class="offer-card">
           <h3>Basic</h3>
-          <div class="offer-price">400€</div>
+          <div class="offer-price">300 euro</div>
           <p class="offer-desc">
-            Potrivit pentru cine are nevoie de un site simplu, curat și profesional.
+            Potrivit pentru cei care au nevoie de un site simplu, curat și profesional.
           </p>
           <ul class="offer-features">
             <li>1-3 pagini</li>
             <li>Design modern și aerisit</li>
             <li>Versiune responsive</li>
             <li>Secțiune de contact</li>
-            <li>Livrare rapidă</li>
           </ul>
           <div class="offer-actions">
-            <button class="offer-btn" onclick="selectPackage('Basic')">Alege pachetul</button>
+            <button class="offer-btn" onclick="selectPackage('Basic - 300 euro')">Alege pachetul</button>
           </div>
         </div>
 
         <div class="offer-card featured">
           <h3>Standard</h3>
-          <div class="offer-price">700€</div>
+          <div class="offer-price">450 euro</div>
           <p class="offer-desc">
             Varianta recomandată pentru afaceri care vor un site mai complet și mai bine structurat.
           </p>
@@ -796,30 +795,43 @@
             <li>Design personalizat</li>
             <li>Responsive pe toate dispozitivele</li>
             <li>Formular de contact</li>
-            <li>Structură mai profesionistă</li>
-            <li>Optimizare vizuală mai bună</li>
           </ul>
           <div class="offer-actions">
-            <button class="offer-btn" onclick="selectPackage('Standard')">Alege pachetul</button>
+            <button class="offer-btn" onclick="selectPackage('Standard - 450 euro')">Alege pachetul</button>
           </div>
         </div>
 
         <div class="offer-card">
           <h3>Premium</h3>
-          <div class="offer-price">1200€</div>
+          <div class="offer-price">500 euro</div>
           <p class="offer-desc">
-            Pentru cei care vor un site complet, cu imagine premium și atenție la detalii.
+            Pentru cei care vor un site mai avansat, cu atenție mai mare la structură și detalii.
           </p>
           <ul class="offer-features">
-            <li>6+ pagini</li>
+            <li>Mai multe pagini</li>
             <li>Design premium</li>
             <li>Responsive complet</li>
-            <li>Formular personalizat</li>
-            <li>Secțiuni speciale la cerere</li>
-            <li>Prioritate la modificări</li>
+            <li>Secțiuni suplimentare la cerere</li>
           </ul>
           <div class="offer-actions">
-            <button class="offer-btn" onclick="selectPackage('Premium')">Alege pachetul</button>
+            <button class="offer-btn" onclick="selectPackage('Premium - 500 euro')">Alege pachetul</button>
+          </div>
+        </div>
+
+        <div class="offer-card">
+          <h3>Personalizat</h3>
+          <div class="offer-price">Personalizat în buget</div>
+          <p class="offer-desc">
+            Pentru proiecte speciale, cerințe diferite sau un buget stabilit de client.
+          </p>
+          <ul class="offer-features">
+            <li>Structură adaptată nevoilor tale</li>
+            <li>Funcționalități la cerere</li>
+            <li>Design în funcție de buget</li>
+            <li>Discuție directă pentru ofertă</li>
+          </ul>
+          <div class="offer-actions">
+            <button class="offer-btn" onclick="selectPackage('Personalizat în buget')">Alege pachetul</button>
           </div>
         </div>
       </div>
@@ -829,21 +841,21 @@
   <section class="section" id="despre">
     <div class="container">
       <div class="section-heading">
-        <h2>Despre mine</h2>
+        <h2>Despre noi</h2>
       </div>
 
       <div class="about-box">
         <p>
-          Mă ocup de crearea site-urilor pentru persoane, branduri și afaceri care vor
-          să arate profesionist în mediul online.
+          AutoBot Innovations este echipa care se ocupă de crearea site-urilor pentru persoane,
+          branduri și afaceri care vor să arate profesionist în mediul online.
         </p>
         <p>
-          Scopul meu este să construiesc pagini clare, moderne și plăcute vizual,
+          Scopul nostru este să construim pagini clare, moderne și plăcute vizual,
           fără elemente exagerate, astfel încât site-ul să inspire încredere și să fie ușor de folosit.
         </p>
         <p>
           Fie că ai nevoie de un site simplu de prezentare sau de o variantă mai completă,
-          pot adapta structura în funcție de ceea ce ai nevoie.
+          noi putem adapta structura în funcție de ceea ce ai nevoie.
         </p>
       </div>
     </div>
@@ -908,10 +920,10 @@
 
             <select id="package" required>
               <option value="">Selectează pachetul dorit</option>
-              <option value="Basic">Basic</option>
-              <option value="Standard">Standard</option>
-              <option value="Premium">Premium</option>
-              <option value="Nu sunt sigur încă">Nu sunt sigur încă</option>
+              <option value="Basic - 300 euro">Basic - 300 euro</option>
+              <option value="Standard - 450 euro">Standard - 450 euro</option>
+              <option value="Premium - 500 euro">Premium - 500 euro</option>
+              <option value="Personalizat în buget">Personalizat în buget</option>
             </select>
 
             <textarea
@@ -928,7 +940,7 @@
   </section>
 
   <div class="footer">
-    © 2026 NexWeb Studio. Toate drepturile rezervate.
+    © 2026 AutoBot Innovations. Toate drepturile rezervate.
   </div>
 
   <script>
@@ -991,7 +1003,7 @@
       const message = document.getElementById("message").value.trim();
 
       const whatsappMessage =
-`Bună! Mă interesează un site.
+`Bună! Sunt interesat(ă) de un site.
 
 Nume: ${name}
 Email: ${email}
