@@ -4,48 +4,61 @@
   <meta name="google-site-verification" content="wydNU-AOrADamdnpTrK8KLmUXD3JbW2ML7V_ylEFzzg" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AutoBot Innovations | Creare site-uri moderne pentru afaceri</title>
+  <title>AutoBot Innovations | Site-uri premium pentru afaceri care vor clienți</title>
   <meta
     name="description"
-    content="AutoBot Innovations creează site-uri moderne, rapide și profesionale pentru afaceri. Alege unul dintre pachetele disponibile și cere o ofertă direct pe WhatsApp."
+    content="AutoBot Innovations creează site-uri moderne, premium și orientate spre conversie pentru afaceri care vor să atragă clienți și să arate profesionist în online."
   />
 
   <style>
     :root {
-      --bg: #f5f7fb;
-      --bg-soft: #ffffff;
-      --card: #ffffff;
-      --card-2: #f0f3f9;
-      --line: rgba(15, 23, 42, 0.08);
-      --line-strong: rgba(15, 23, 42, 0.16);
-      --text: #172033;
-      --muted: #5f6b85;
-      --muted-2: #7d879c;
-      --accent: #2563eb;
-      --accent-hover: #1d4ed8;
-      --accent-dark: #ffffff;
-      --success: #16a34a;
-      --shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
-      --radius: 18px;
-      --radius-lg: 24px;
-      --max: 1220px;
+      --bg: #07111f;
+      --bg-2: #0b1628;
+      --bg-3: #0f1d33;
+      --bg-soft: rgba(16, 25, 44, 0.78);
+      --card: rgba(14, 24, 44, 0.8);
+      --card-2: rgba(17, 31, 58, 0.95);
+      --line: rgba(120, 145, 255, 0.14);
+      --line-strong: rgba(133, 165, 255, 0.3);
+      --text: #f5f8ff;
+      --muted: #a7b6d4;
+      --muted-2: #7f92b7;
+
+      --accent: #6ee7ff;
+      --accent-2: #8b5cf6;
+      --accent-3: #00ffa6;
+      --accent-hover: #9ef1ff;
+      --accent-dark: #07111f;
+
+      --success: #22c55e;
+      --warning: #f59e0b;
+
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.32);
+      --shadow-glow: 0 0 0 1px rgba(110, 231, 255, 0.06), 0 0 40px rgba(110, 231, 255, 0.08);
+      --radius: 20px;
+      --radius-lg: 28px;
+      --max: 1240px;
     }
 
-    body.dark-theme {
-      --bg: #0f172a;
-      --bg-soft: #111c33;
-      --card: #16213b;
-      --card-2: #1b2947;
-      --line: rgba(255, 255, 255, 0.08);
-      --line-strong: rgba(255, 255, 255, 0.15);
-      --text: #eef4ff;
-      --muted: #b8c2d9;
-      --muted-2: #8fa0bf;
-      --accent: #60a5fa;
-      --accent-hover: #3b82f6;
-      --accent-dark: #08111f;
-      --success: #22c55e;
-      --shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+    body.light-theme {
+      --bg: #f4f8ff;
+      --bg-2: #edf4ff;
+      --bg-3: #ffffff;
+      --bg-soft: rgba(255, 255, 255, 0.85);
+      --card: rgba(255, 255, 255, 0.86);
+      --card-2: rgba(242, 247, 255, 0.98);
+      --line: rgba(37, 99, 235, 0.1);
+      --line-strong: rgba(37, 99, 235, 0.22);
+      --text: #10203b;
+      --muted: #52627d;
+      --muted-2: #7a89a3;
+      --accent: #0ea5e9;
+      --accent-2: #7c3aed;
+      --accent-3: #06b6d4;
+      --accent-hover: #0284c7;
+      --accent-dark: #ffffff;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      --shadow-glow: 0 0 0 1px rgba(14, 165, 233, 0.06), 0 0 40px rgba(14, 165, 233, 0.06);
     }
 
     * {
@@ -61,12 +74,44 @@
 
     body {
       font-family: Arial, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 30%),
-        radial-gradient(circle at top right, rgba(37, 99, 235, 0.05), transparent 25%),
-        var(--bg);
       color: var(--text);
-      transition: background 0.3s ease, color 0.3s ease;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(110, 231, 255, 0.14), transparent 22%),
+        radial-gradient(circle at 85% 15%, rgba(139, 92, 246, 0.14), transparent 22%),
+        radial-gradient(circle at 50% 80%, rgba(0, 255, 166, 0.08), transparent 18%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
+      transition: background 0.35s ease, color 0.35s ease;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: radial-gradient(circle at center, black 35%, transparent 88%);
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.02) 45%, transparent 50%);
+      animation: scanMove 12s linear infinite;
+      z-index: 0;
+      opacity: 0.35;
+    }
+
+    @keyframes scanMove {
+      0% { transform: translateX(-60%); }
+      100% { transform: translateX(60%); }
     }
 
     a {
@@ -86,23 +131,70 @@
       max-width: var(--max);
       margin: 0 auto;
       padding: 0 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .blur-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.5;
+      pointer-events: none;
+      z-index: 1;
+      animation: floatOrb 10s ease-in-out infinite;
+    }
+
+    .orb-1 {
+      width: 260px;
+      height: 260px;
+      top: 90px;
+      left: -80px;
+      background: rgba(110, 231, 255, 0.22);
+    }
+
+    .orb-2 {
+      width: 300px;
+      height: 300px;
+      top: 120px;
+      right: -120px;
+      background: rgba(139, 92, 246, 0.2);
+      animation-delay: -3s;
+    }
+
+    .orb-3 {
+      width: 240px;
+      height: 240px;
+      bottom: -60px;
+      left: 30%;
+      background: rgba(0, 255, 166, 0.14);
+      animation-delay: -5s;
+    }
+
+    @keyframes floatOrb {
+      0%, 100% {
+        transform: translateY(0px) translateX(0px) scale(1);
+      }
+      50% {
+        transform: translateY(-24px) translateX(12px) scale(1.04);
+      }
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(16px);
+      background: rgba(5, 12, 24, 0.58);
       border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(12px);
     }
 
-    body.dark-theme header {
-      background: rgba(15, 23, 42, 0.88);
+    body.light-theme header {
+      background: rgba(255, 255, 255, 0.74);
     }
 
     .navbar {
-      min-height: 78px;
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -112,10 +204,27 @@
 
     .logo {
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
       white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 18px rgba(110, 231, 255, 0.6);
+      animation: pulseDot 2.2s infinite ease-in-out;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.75; }
     }
 
     .nav-center {
@@ -124,7 +233,7 @@
       transform: translateX(-50%);
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 26px;
       flex-wrap: wrap;
     }
 
@@ -135,16 +244,34 @@
       cursor: pointer;
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
       padding: 8px 0;
-      opacity: 0.92;
-      transition: transform 0.25s ease, opacity 0.25s ease;
+      opacity: 0.9;
+      position: relative;
+      transition: transform 0.25s ease, opacity 0.25s ease, color 0.25s ease;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      transition: width 0.25s ease;
     }
 
     .nav-link:hover {
       opacity: 1;
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      color: var(--accent);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
     }
 
     .nav-right {
@@ -164,17 +291,18 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      box-shadow: var(--shadow-glow);
       transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     }
 
     .theme-toggle:hover {
-      transform: translateY(-1px);
+      transform: translateY(-2px);
       border-color: var(--line-strong);
     }
 
     .hero {
       position: relative;
-      padding: 130px 0 110px;
+      padding: 140px 0 110px;
       overflow: hidden;
     }
 
@@ -182,53 +310,254 @@
       content: "";
       position: absolute;
       inset: auto 0 0 0;
-      height: 140px;
+      height: 180px;
       background: linear-gradient(to bottom, transparent, var(--bg));
       pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 34px;
+      align-items: center;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      text-align: center;
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 0 20px;
     }
 
     .hero-badge {
-      display: inline-block;
-      margin-bottom: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
       padding: 10px 16px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(37, 99, 235, 0.08);
+      background: rgba(110, 231, 255, 0.08);
       color: var(--accent);
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 1.4px;
       text-transform: uppercase;
+      box-shadow: var(--shadow-glow);
     }
 
     .hero h1 {
-      font-size: 58px;
-      line-height: 1.08;
+      font-size: 66px;
+      line-height: 1.03;
       margin: 0 0 20px;
+      max-width: 760px;
+      letter-spacing: -1.4px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--accent), #ffffff 45%, var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    body.light-theme .gradient-text {
+      background: linear-gradient(90deg, var(--accent), #1e293b 45%, var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero p {
       font-size: 18px;
       color: var(--muted);
-      max-width: 780px;
-      margin: 0 auto 32px;
-      line-height: 1.75;
+      max-width: 760px;
+      margin: 0 0 32px;
+      line-height: 1.8;
     }
 
     .hero-actions {
       display: flex;
-      justify-content: center;
       gap: 14px;
       flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 760px;
+    }
+
+    .hero-point {
+      padding: 16px 16px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 16px;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.55;
+      box-shadow: var(--shadow-glow);
+      backdrop-filter: blur(10px);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .hero-point:hover {
+      transform: translateY(-4px);
+      border-color: var(--line-strong);
+    }
+
+    .hero-visual {
+      position: relative;
+      z-index: 2;
+    }
+
+    .tech-window {
+      position: relative;
+      background: linear-gradient(180deg, rgba(9,18,34,0.92), rgba(14, 26, 50, 0.92));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 18px;
+      box-shadow: var(--shadow), var(--shadow-glow);
+      overflow: hidden;
+      animation: floatCard 6s ease-in-out infinite;
+    }
+
+    body.light-theme .tech-window {
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(240,247,255,0.98));
+    }
+
+    .tech-window::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(110, 231, 255, 0.08), transparent 30%, rgba(139, 92, 246, 0.08));
+      pointer-events: none;
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .window-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .window-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+    }
+
+    .window-dot:nth-child(1) { background: #ff5f57; }
+    .window-dot:nth-child(2) { background: #febc2e; }
+    .window-dot:nth-child(3) { background: #28c840; }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .dash-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      min-height: 120px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body.light-theme .dash-card {
+      background: rgba(255,255,255,0.75);
+    }
+
+    .dash-card.large {
+      grid-column: span 2;
+      min-height: 150px;
+    }
+
+    .dash-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted-2);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .dash-main {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .dash-sub {
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .mini-bars {
+      display: flex;
+      align-items: end;
+      gap: 8px;
+      height: 78px;
+      margin-top: 14px;
+    }
+
+    .mini-bars span {
+      display: block;
+      flex: 1;
+      border-radius: 999px 999px 6px 6px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      animation: barPulse 2.4s ease-in-out infinite;
+      opacity: 0.95;
+    }
+
+    .mini-bars span:nth-child(1) { height: 28px; animation-delay: -0.2s; }
+    .mini-bars span:nth-child(2) { height: 48px; animation-delay: -0.5s; }
+    .mini-bars span:nth-child(3) { height: 38px; animation-delay: -0.8s; }
+    .mini-bars span:nth-child(4) { height: 62px; animation-delay: -1.1s; }
+    .mini-bars span:nth-child(5) { height: 52px; animation-delay: -1.4s; }
+    .mini-bars span:nth-child(6) { height: 74px; animation-delay: -1.7s; }
+
+    @keyframes barPulse {
+      0%, 100% { transform: scaleY(1); filter: brightness(1); }
+      50% { transform: scaleY(1.08); filter: brightness(1.12); }
+    }
+
+    .floating-chip {
+      position: absolute;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(10, 17, 31, 0.8);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      box-shadow: var(--shadow-glow);
+      animation: floatChip 5s ease-in-out infinite;
+    }
+
+    body.light-theme .floating-chip {
+      background: rgba(255,255,255,0.85);
+    }
+
+    .chip-1 { top: -18px; right: 20px; animation-delay: -0.5s; }
+    .chip-2 { bottom: 20px; left: -24px; animation-delay: -1.8s; }
+    .chip-3 { bottom: -18px; right: 34px; animation-delay: -3s; }
+
+    @keyframes floatChip {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
     }
 
     .btn,
@@ -237,64 +566,112 @@
     .lead-submit-btn {
       border: none;
       cursor: pointer;
-      transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+      transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
     .btn,
     .offer-btn,
     .lead-submit-btn {
-      background: var(--accent);
-      color: var(--accent-dark);
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color: #06101f;
       padding: 14px 24px;
-      border-radius: 12px;
+      border-radius: 14px;
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 800;
+      box-shadow: 0 12px 30px rgba(110, 231, 255, 0.18);
     }
 
     .btn:hover,
     .offer-btn:hover,
     .lead-submit-btn:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(110, 231, 255, 0.22);
     }
 
     .secondary-btn {
-      background: transparent;
+      background: rgba(255,255,255,0.03);
       color: var(--text);
       padding: 14px 24px;
-      border-radius: 12px;
+      border-radius: 14px;
       border: 1px solid var(--line);
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 800;
+      box-shadow: var(--shadow-glow);
     }
 
     .secondary-btn:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
+      transform: translateY(-3px);
+      border-color: var(--line-strong);
     }
 
     .section {
-      padding: 90px 0;
+      padding: 92px 0;
+      position: relative;
+      z-index: 2;
     }
 
     .section-heading {
       text-align: center;
-      margin-bottom: 44px;
+      margin-bottom: 46px;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .section-heading h2 {
       margin: 0 0 16px;
-      font-size: 38px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-size: 42px;
+      letter-spacing: -0.5px;
     }
 
     .section-subtext {
       max-width: 860px;
       margin: 0 auto;
       color: var(--muted);
-      line-height: 1.75;
+      line-height: 1.8;
       font-size: 17px;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 34px;
+    }
+
+    .result-card {
+      padding: 26px 22px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--card), var(--card-2));
+      box-shadow: var(--shadow-glow);
+      text-align: left;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .result-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--line-strong);
+    }
+
+    .result-number {
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .result-label {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--muted);
     }
 
     .services {
@@ -306,30 +683,48 @@
 
     .card {
       background: linear-gradient(180deg, var(--card), var(--card-2));
-      padding: 26px;
+      padding: 28px;
       border-radius: var(--radius);
       border: 1px solid var(--line);
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow), var(--shadow-glow);
       text-align: left;
-      transition: transform 0.25s ease, border-color 0.25s ease;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(110,231,255,0.06), transparent 35%, rgba(139,92,246,0.06));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
     }
 
     .card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-8px);
       border-color: var(--line-strong);
+      box-shadow: var(--shadow), 0 0 0 1px rgba(110, 231, 255, 0.1), 0 0 46px rgba(110, 231, 255, 0.08);
+    }
+
+    .card:hover::before {
+      opacity: 1;
     }
 
     .card-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 14px;
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(37, 99, 235, 0.08);
+      background: linear-gradient(135deg, rgba(110,231,255,0.16), rgba(139,92,246,0.16));
       border: 1px solid var(--line);
       margin-bottom: 18px;
-      font-size: 22px;
+      font-size: 24px;
+      box-shadow: var(--shadow-glow);
     }
 
     .card h3 {
@@ -339,9 +734,143 @@
 
     .card p {
       color: var(--muted);
-      line-height: 1.65;
+      line-height: 1.75;
       font-size: 15px;
+      margin: 0 0 16px;
+    }
+
+    .card-list {
+      list-style: none;
+      padding: 0;
       margin: 0;
+    }
+
+    .card-list li {
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 8px;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .card-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 12px rgba(110, 231, 255, 0.6);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      align-items: stretch;
+      margin-top: 36px;
+    }
+
+    .why-box,
+    .why-side {
+      background: linear-gradient(180deg, var(--card), var(--card-2));
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 30px;
+      box-shadow: var(--shadow), var(--shadow-glow);
+    }
+
+    .why-box h3,
+    .why-side h3 {
+      margin: 0 0 16px;
+      font-size: 26px;
+    }
+
+    .why-box p,
+    .why-side p {
+      color: var(--muted);
+      line-height: 1.85;
+      margin: 0 0 16px;
+      font-size: 16px;
+    }
+
+    .why-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .why-point {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .why-point strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .why-point span {
+      display: block;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 34px;
+    }
+
+    .process-card {
+      position: relative;
+      background: linear-gradient(180deg, var(--card), var(--card-2));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: var(--shadow-glow);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .process-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--line-strong);
+    }
+
+    .process-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #04101f;
+      box-shadow: 0 12px 30px rgba(110, 231, 255, 0.18);
+    }
+
+    .process-card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .process-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 15px;
     }
 
     .offers {
@@ -355,15 +884,33 @@
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       padding: 30px 26px;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow), var(--shadow-glow);
       text-align: left;
       position: relative;
       overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--line-strong);
+    }
+
+    .offer-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -30% -30% auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(110,231,255,0.18), transparent 65%);
+      pointer-events: none;
     }
 
     .offer-card.featured {
-      border-color: rgba(37, 99, 235, 0.28);
-      transform: scale(1.01);
+      border-color: rgba(110, 231, 255, 0.34);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow), 0 0 0 1px rgba(110,231,255,0.16), 0 0 50px rgba(110,231,255,0.1);
     }
 
     .offer-card.featured::before {
@@ -371,12 +918,13 @@
       position: absolute;
       top: 16px;
       right: 16px;
-      background: var(--accent);
-      color: var(--accent-dark);
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color: #06101f;
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
       padding: 8px 10px;
       border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(110,231,255,0.18);
     }
 
     .offer-card h3 {
@@ -386,7 +934,7 @@
 
     .offer-price {
       font-size: 28px;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 18px;
       color: var(--accent);
     }
@@ -407,19 +955,22 @@
     .offer-features li {
       color: var(--text);
       font-size: 14px;
-      line-height: 1.65;
+      line-height: 1.72;
       margin-bottom: 10px;
       padding-left: 18px;
       position: relative;
     }
 
     .offer-features li::before {
-      content: "•";
+      content: "";
       position: absolute;
       left: 0;
-      top: 0;
-      color: var(--accent);
-      font-weight: 700;
+      top: 9px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 12px rgba(110, 231, 255, 0.45);
     }
 
     .offer-actions {
@@ -430,21 +981,34 @@
 
     .about-box,
     .contact-box {
-      max-width: 920px;
+      max-width: 980px;
       margin: 0 auto;
       background: linear-gradient(180deg, var(--card), var(--card-2));
       border: 1px solid var(--line);
-      border-radius: 26px;
-      padding: 34px;
-      box-shadow: var(--shadow);
+      border-radius: 28px;
+      padding: 36px;
+      box-shadow: var(--shadow), var(--shadow-glow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-box::before,
+    .contact-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(110,231,255,0.05), transparent 32%, rgba(139,92,246,0.06));
+      pointer-events: none;
     }
 
     .about-box p,
     .contact-box p {
       color: var(--muted);
       font-size: 17px;
-      line-height: 1.85;
+      line-height: 1.9;
       margin: 12px 0;
+      position: relative;
+      z-index: 2;
     }
 
     .contact-grid {
@@ -452,14 +1016,23 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
       margin-top: 28px;
+      position: relative;
+      z-index: 2;
     }
 
     .contact-item {
-      background: rgba(37, 99, 235, 0.04);
+      background: rgba(255, 255, 255, 0.035);
       border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 20px;
+      border-radius: 20px;
+      padding: 22px;
       text-align: left;
+      box-shadow: var(--shadow-glow);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--line-strong);
     }
 
     .contact-item h4 {
@@ -471,7 +1044,7 @@
     .contact-item a {
       margin: 0;
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.7;
       font-size: 15px;
       word-break: break-word;
     }
@@ -483,12 +1056,24 @@
     .lead-box {
       background: linear-gradient(180deg, var(--card), var(--card-2));
       border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 34px;
+      border-radius: 30px;
+      padding: 36px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 34px;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow), var(--shadow-glow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lead-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(110,231,255,0.09), transparent 18%),
+        radial-gradient(circle at 90% 10%, rgba(139,92,246,0.09), transparent 18%);
+      pointer-events: none;
     }
 
     .lead-left {
@@ -496,6 +1081,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      position: relative;
+      z-index: 2;
     }
 
     .lead-kicker {
@@ -503,30 +1090,36 @@
       margin-bottom: 18px;
       color: var(--accent);
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
 
     .lead-left h2 {
       margin: 0 0 20px;
-      font-size: 50px;
+      font-size: 52px;
       line-height: 1.05;
-      font-weight: 700;
+      font-weight: 800;
       max-width: 520px;
+      letter-spacing: -1px;
     }
 
     .lead-left p {
       color: var(--muted);
       font-size: 17px;
-      line-height: 1.8;
+      line-height: 1.85;
       max-width: 560px;
       margin: 0 0 24px;
     }
 
+    .lead-contact-info {
+      display: grid;
+      gap: 10px;
+    }
+
     .lead-contact-info p {
-      margin: 8px 0;
-      font-size: 16px;
+      margin: 0;
+      font-size: 15px;
       color: var(--muted);
     }
 
@@ -534,19 +1127,28 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
+      position: relative;
+      z-index: 2;
     }
 
     .lead-form input,
     .lead-form textarea,
     .lead-form select {
       width: 100%;
-      background: var(--bg-soft);
+      background: rgba(255,255,255,0.03);
       border: 1px solid var(--line);
       color: var(--text);
       padding: 18px 20px;
       font-size: 15px;
       outline: none;
-      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+      box-shadow: var(--shadow-glow);
+    }
+
+    body.light-theme .lead-form input,
+    body.light-theme .lead-form textarea,
+    body.light-theme .lead-form select {
+      background: rgba(255,255,255,0.8);
     }
 
     .lead-form input,
@@ -569,8 +1171,9 @@
     .lead-form input:focus,
     .lead-form textarea:focus,
     .lead-form select:focus {
-      border-color: rgba(37, 99, 235, 0.35);
-      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+      border-color: rgba(110, 231, 255, 0.35);
+      box-shadow: 0 0 0 4px rgba(110, 231, 255, 0.08);
+      transform: translateY(-1px);
     }
 
     .lead-submit-btn {
@@ -578,20 +1181,44 @@
       border-radius: 999px;
       padding: 18px 24px;
       font-size: 16px;
+      font-weight: 800;
     }
 
     .footer {
       text-align: center;
       padding: 28px 20px;
-      background: transparent;
       border-top: 1px solid var(--line);
       color: var(--muted);
       margin-top: 20px;
+      position: relative;
+      z-index: 2;
     }
 
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.08s; }
+    .reveal-delay-2 { transition-delay: 0.16s; }
+    .reveal-delay-3 { transition-delay: 0.24s; }
+    .reveal-delay-4 { transition-delay: 0.32s; }
+
     @media (max-width: 1200px) {
-      .offers {
+      .offers,
+      .results-grid,
+      .process-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 58px;
       }
     }
 
@@ -602,6 +1229,15 @@
 
       .contact-grid {
         grid-template-columns: 1fr;
+      }
+
+      .hero-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        max-width: 760px;
       }
     }
 
@@ -629,7 +1265,7 @@
       }
 
       .hero h1 {
-        font-size: 42px;
+        font-size: 46px;
       }
 
       .lead-box {
@@ -637,19 +1273,25 @@
       }
 
       .lead-left h2 {
-        font-size: 38px;
+        font-size: 40px;
         max-width: 100%;
+      }
+
+      .hero-points {
+        grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 700px) {
       .services,
-      .offers {
+      .offers,
+      .results-grid,
+      .process-grid {
         grid-template-columns: 1fr;
       }
 
       .hero h1 {
-        font-size: 34px;
+        font-size: 36px;
       }
 
       .hero p,
@@ -661,96 +1303,366 @@
       }
 
       .section-heading h2 {
-        font-size: 30px;
+        font-size: 31px;
       }
 
       .lead-box,
       .about-box,
-      .contact-box {
+      .contact-box,
+      .why-box,
+      .why-side {
         padding: 24px;
       }
 
       .lead-left h2 {
-        font-size: 32px;
+        font-size: 33px;
+      }
+
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dash-card.large {
+        grid-column: span 1;
+      }
+
+      .why-points {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
-<body class="dark-theme">
+<body>
 
   <header>
     <div class="container navbar">
-      <div class="logo">AUTOBOT INNOVATIONS</div>
+      <div class="logo">
+        <span class="logo-dot"></span>
+        AUTOBOT INNOVATIONS
+      </div>
 
       <nav class="nav-center" aria-label="Navigare principală">
-        <button class="nav-link" onclick="goToSection('acasa')">ACASĂ</button>
-        <button class="nav-link" onclick="goToSection('servicii')">SERVICII</button>
-        <button class="nav-link" onclick="goToSection('pachete')">PACHETE</button>
-        <button class="nav-link" onclick="goToSection('despre')">DESPRE</button>
-        <button class="nav-link" onclick="goToSection('formular')">OFERTĂ</button>
+        <button class="nav-link" onclick="goToSection('acasa')">Acasă</button>
+        <button class="nav-link" onclick="goToSection('rezultate')">Rezultate</button>
+        <button class="nav-link" onclick="goToSection('servicii')">Servicii</button>
+        <button class="nav-link" onclick="goToSection('pachete')">Pachete</button>
+        <button class="nav-link" onclick="goToSection('despre')">Despre</button>
+        <button class="nav-link" onclick="goToSection('formular')">Ofertă</button>
       </nav>
 
       <div class="nav-right">
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Schimbă tema">
-          <span id="theme-icon">☀️</span>
-          <span id="theme-text">Light</span>
+          <span id="theme-icon">🌙</span>
+          <span id="theme-text">Dark</span>
         </button>
       </div>
     </div>
   </header>
 
   <section class="hero" id="acasa">
-    <div class="hero-content">
-      <span class="hero-badge">Creare site-uri moderne pentru afaceri</span>
-      <h1>Noi construim site-uri profesionale, clare și moderne pentru afacerea ta</h1>
-      <p>
-        Dacă ai nevoie de un site de prezentare, un site pentru servicii sau o pagină modernă
-        pentru brandul tău, noi te putem ajuta cu un design curat, aspect profesional și structură bine gândită.
-      </p>
+    <div class="blur-orb orb-1"></div>
+    <div class="blur-orb orb-2"></div>
+    <div class="blur-orb orb-3"></div>
 
-      <div class="hero-actions">
-        <button class="btn" onclick="goToSection('pachete')">Vezi pachetele</button>
-        <button class="secondary-btn" onclick="goToSection('formular')">Cere ofertă</button>
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <span class="hero-badge">Site-uri premium pentru afaceri care vor să crească</span>
+
+        <h1>
+          Noi transformăm lipsa de prezență online în
+          <span class="gradient-text">încredere, imagine și clienți</span>
+        </h1>
+
+        <p>
+          Dacă o afacere nu există bine în online, pierde atenție, pierde credibilitate și pierde clienți.
+          Noi construim site-uri moderne, rapide și orientate spre conversie, astfel încât brandul tău să arate profesionist,
+          să fie luat în serios și să atragă mai multe cereri din mediul online.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn" onclick="goToSection('pachete')">Vezi pachetele</button>
+          <button class="secondary-btn" onclick="goToSection('formular')">Cere ofertă</button>
+        </div>
+
+        <div class="hero-points">
+          <div class="hero-point">
+            <strong>Imagine profesională</strong><br />
+            Un site bun te face să pari serios din primul moment.
+          </div>
+          <div class="hero-point">
+            <strong>Mai multe șanse de vânzare</strong><br />
+            Prezinți clar serviciile și convingi mai ușor clienții.
+          </div>
+          <div class="hero-point">
+            <strong>Prezență online reală</strong><br />
+            Te găsesc oamenii mai ușor și capătă încredere în brand.
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-delay-2">
+        <div class="tech-window">
+          <div class="floating-chip chip-1">Design modern</div>
+          <div class="floating-chip chip-2">Mobile first</div>
+          <div class="floating-chip chip-3">Gândit pentru conversie</div>
+
+          <div class="window-top">
+            <span class="window-dot"></span>
+            <span class="window-dot"></span>
+            <span class="window-dot"></span>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="dash-card large">
+              <div class="dash-title">Prezență online</div>
+              <div class="dash-main">+ Credibilitate</div>
+              <div class="dash-sub">
+                Un site bine făcut transmite clar că afacerea este activă, serioasă și pregătită să lucreze cu clienți reali.
+              </div>
+              <div class="mini-bars">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="dash-card">
+              <div class="dash-title">Brand image</div>
+              <div class="dash-main">Premium</div>
+              <div class="dash-sub">Aspect IT, modern și profesionist pentru business.</div>
+            </div>
+
+            <div class="dash-card">
+              <div class="dash-title">Conversie</div>
+              <div class="dash-main">Focus</div>
+              <div class="dash-sub">Structură clară ca vizitatorii să devină potențiali clienți.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="rezultate">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="section-kicker">De ce contează</span>
+        <h2>Ce câștigă o afacere când are un site bun</h2>
+        <p class="section-subtext">
+          Un site nu este doar „o pagină pe internet”. Este imaginea brandului, punctul de încredere pentru client
+          și locul în care oamenii decid dacă te contactează sau nu.
+        </p>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card reveal">
+          <div class="result-number">24/7</div>
+          <div class="result-label">
+            Afacerea ta poate fi prezentată non-stop, chiar și când tu nu răspunzi la telefon.
+          </div>
+        </div>
+
+        <div class="result-card reveal reveal-delay-1">
+          <div class="result-number">+Trust</div>
+          <div class="result-label">
+            Clienții au mult mai multă încredere într-o firmă care are prezență online clară și profesionistă.
+          </div>
+        </div>
+
+        <div class="result-card reveal reveal-delay-2">
+          <div class="result-number">+Leads</div>
+          <div class="result-label">
+            Un site bine structurat poate transforma vizitatorii în oameni care cer ofertă sau vor să cumpere.
+          </div>
+        </div>
+
+        <div class="result-card reveal reveal-delay-3">
+          <div class="result-number">+Image</div>
+          <div class="result-label">
+            Brandul tău arată mai serios, mai modern și mai pregătit față de concurența fără site.
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section" id="servicii">
     <div class="container">
-      <div class="section-heading">
-        <h2>Ce oferim</h2>
+      <div class="section-heading reveal">
+        <span class="section-kicker">Ce oferim</span>
+        <h2>Construim site-uri care arată bine și vând mai bine</h2>
         <p class="section-subtext">
-          Noi realizăm site-uri cu un aspect modern, ușor de folosit, adaptate pentru telefon,
-          tabletă și desktop, astfel încât afacerea ta să arate profesionist în online.
+          Nu facem doar pagini „frumoase”. Construim site-uri gândite pentru imagine, claritate,
+          prezentare bună a serviciilor și creșterea șanselor de a atrage clienți.
         </p>
       </div>
 
       <div class="services">
-        <div class="card">
-          <div class="card-icon">💻</div>
-          <h3>Site de prezentare</h3>
+        <div class="card reveal">
+          <div class="card-icon">🌐</div>
+          <h3>Site de prezentare profesional</h3>
           <p>
-            Ideal pentru firme, servicii, portofolii sau afaceri locale care au nevoie
-            de o prezență online serioasă și clară.
+            Pentru firme, branduri, servicii sau afaceri locale care au nevoie de o prezență online serioasă și convingătoare.
           </p>
+          <ul class="card-list">
+            <li>Imagine profesională pentru business</li>
+            <li>Structură clară și ușor de parcurs</li>
+            <li>Texte și secțiuni gândite pentru încredere</li>
+          </ul>
         </div>
 
-        <div class="card">
-          <div class="card-icon">📱</div>
-          <h3>Design responsive</h3>
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon">📲</div>
+          <h3>Design responsive pe orice dispozitiv</h3>
           <p>
-            Site-ul va arăta bine pe telefon, tabletă și calculator, pentru o experiență
-            plăcută indiferent de dispozitiv.
+            Site-ul va arăta bine pe telefon, tabletă și desktop, astfel încât experiența să fie curată și modernă peste tot.
           </p>
+          <ul class="card-list">
+            <li>Adaptare perfectă pentru mobil</li>
+            <li>Aspect fluid și elegant</li>
+            <li>Navigare simplă pentru utilizatori</li>
+          </ul>
         </div>
 
-        <div class="card">
+        <div class="card reveal reveal-delay-2">
           <div class="card-icon">⚡</div>
-          <h3>Aspect modern</h3>
+          <h3>Site orientat spre conversie</h3>
           <p>
-            Punem accent pe simplitate, culori plăcute, structură curată și un design
-            profesional care inspiră încredere.
+            Punem accent pe secțiuni care vând: prezentare clară, butoane bine plasate și traseu logic către contact sau ofertă.
           </p>
+          <ul class="card-list">
+            <li>CTA-uri mai bune</li>
+            <li>Mesaj clar despre ce oferi</li>
+            <li>Mai multe șanse să fii contactat</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">🎯</div>
+          <h3>Mesaj de brand mai puternic</h3>
+          <p>
+            Te ajutăm să prezinți ce faci într-un mod mai clar, mai profesionist și mai convingător pentru potențialii clienți.
+          </p>
+          <ul class="card-list">
+            <li>Poziționare mai bună în fața clientului</li>
+            <li>Text mai clar și mai vânzător</li>
+            <li>Imagine unitară pentru firmă</li>
+          </ul>
+        </div>
+
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon">🚀</div>
+          <h3>Start online pentru afaceri fără site</h3>
+          <p>
+            Dacă încă nu ai prezență online, îți construim baza digitală de care ai nevoie ca să începi profesionist.
+          </p>
+          <ul class="card-list">
+            <li>Perfect pentru firme locale</li>
+            <li>Mai ușor de promovat ulterior</li>
+            <li>Crești credibilitatea imediat</li>
+          </ul>
+        </div>
+
+        <div class="card reveal reveal-delay-2">
+          <div class="card-icon">🧠</div>
+          <h3>Aspect premium, tentă IT</h3>
+          <p>
+            Stil vizual modern, curat și tech, pentru afaceri care vor să inspire seriozitate, inovație și profesionalism.
+          </p>
+          <ul class="card-list">
+            <li>Look premium și actual</li>
+            <li>Animații elegante și moderne</li>
+            <li>Design care iese în evidență</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="de-ce-noi">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="section-kicker">Valoarea reală</span>
+        <h2>Nu vindem doar un site. Vindem imagine, claritate și oportunitatea de a atrage clienți.</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-box reveal">
+          <h3>Mulți antreprenori pierd clienți fără să-și dea seama</h3>
+          <p>
+            Când cineva caută informații despre o firmă și nu găsește nimic clar online, apare imediat nesiguranța.
+            Lipsa unui site sau un site slab făcut poate însemna impresia că afacerea nu este serioasă, nu este actuală
+            sau nu inspiră suficientă încredere.
+          </p>
+          <p>
+            Noi rezolvăm exact problema asta: luăm o afacere fără prezență online bună și o transformăm într-un brand
+            care arată bine, se prezintă clar și are o imagine mult mai credibilă în fața clientului.
+          </p>
+
+          <div class="why-points">
+            <div class="why-point">
+              <strong>Clienții te iau mai în serios</strong>
+              <span>Un site profesionist schimbă imediat prima impresie despre firmă.</span>
+            </div>
+            <div class="why-point">
+              <strong>Concurența fără site rămâne în urmă</strong>
+              <span>Tu pari mai modern, mai organizat și mai pregătit.</span>
+            </div>
+            <div class="why-point">
+              <strong>Promovarea devine mai ușoară</strong>
+              <span>Când ai unde să trimiți clientul, tot marketingul are mai mult sens.</span>
+            </div>
+            <div class="why-point">
+              <strong>Crești șansele de contact</strong>
+              <span>Informațiile sunt clare, iar omul înțelege repede ce oferi.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-side reveal reveal-delay-2">
+          <h3>Ce urmărim când construim un site</h3>
+          <p><strong>1.</strong> Să arate premium și actual</p>
+          <p><strong>2.</strong> Să explice rapid și clar ce oferi</p>
+          <p><strong>3.</strong> Să inspire încredere încă din primele secunde</p>
+          <p><strong>4.</strong> Să trimită omul natural către contact sau ofertă</p>
+          <p><strong>5.</strong> Să îți ofere o bază online serioasă pentru viitoare promovare</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="proces">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="section-kicker">Cum lucrăm</span>
+        <h2>Proces simplu, clar și profesionist</h2>
+        <p class="section-subtext">
+          Lucrăm organizat, astfel încât să înțelegem afacerea, să construim direcția potrivită
+          și să livrăm un site care să te reprezinte bine.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card reveal">
+          <div class="process-number">01</div>
+          <h3>Discuție</h3>
+          <p>Înțelegem ce face afacerea ta, cui vinzi și ce imagine vrei să transmiți.</p>
+        </div>
+
+        <div class="process-card reveal reveal-delay-1">
+          <div class="process-number">02</div>
+          <h3>Structură</h3>
+          <p>Stabilim ce secțiuni sunt necesare și cum trebuie prezentat totul clar și logic.</p>
+        </div>
+
+        <div class="process-card reveal reveal-delay-2">
+          <div class="process-number">03</div>
+          <h3>Design</h3>
+          <p>Construim un aspect modern, premium, cu tentă IT și animații elegante.</p>
+        </div>
+
+        <div class="process-card reveal reveal-delay-3">
+          <div class="process-number">04</div>
+          <h3>Lansare</h3>
+          <p>Primești un site pregătit să inspire încredere și să ajute afacerea să se prezinte mai bine online.</p>
         </div>
       </div>
     </div>
@@ -758,77 +1670,82 @@
 
   <section class="section" id="pachete">
     <div class="container">
-      <div class="section-heading">
-        <h2>Pachete</h2>
+      <div class="section-heading reveal">
+        <span class="section-kicker">Pachete</span>
+        <h2>Alege varianta potrivită pentru nivelul afacerii tale</h2>
         <p class="section-subtext">
-          Alege varianta potrivită pentru nevoile tale. De la un site simplu până la
-          o variantă complet personalizată.
+          De la un site simplu și elegant până la o variantă mai puternică și personalizată,
+          gândită pentru o imagine mai premium.
         </p>
       </div>
 
       <div class="offers">
-        <div class="offer-card">
+        <div class="offer-card reveal">
           <h3>Basic</h3>
           <div class="offer-price">300 euro</div>
           <p class="offer-desc">
-            Potrivit pentru cei care au nevoie de un site simplu, curat și profesional.
+            Bun pentru afaceri aflate la început sau pentru cei care vor o prezență online clară și curată.
           </p>
           <ul class="offer-features">
             <li>1-3 pagini</li>
             <li>Design modern și aerisit</li>
-            <li>Versiune responsive</li>
+            <li>Responsive pe mobil și desktop</li>
             <li>Secțiune de contact</li>
+            <li>Imagine profesională de bază</li>
           </ul>
           <div class="offer-actions">
             <button class="offer-btn" onclick="selectPackage('Basic - 300 euro')">Alege pachetul</button>
           </div>
         </div>
 
-        <div class="offer-card featured">
+        <div class="offer-card featured reveal reveal-delay-1">
           <h3>Standard</h3>
           <div class="offer-price">450 euro</div>
           <p class="offer-desc">
-            Varianta recomandată pentru afaceri care vor un site mai complet și mai bine structurat.
+            Varianta recomandată pentru afaceri care vor un site mai complet, mai convingător și mai bine structurat.
           </p>
           <ul class="offer-features">
             <li>4-6 pagini</li>
             <li>Design personalizat</li>
-            <li>Responsive pe toate dispozitivele</li>
+            <li>Responsive complet</li>
             <li>Formular de contact</li>
+            <li>Structură mai bună pentru prezentarea serviciilor</li>
           </ul>
           <div class="offer-actions">
             <button class="offer-btn" onclick="selectPackage('Standard - 450 euro')">Alege pachetul</button>
           </div>
         </div>
 
-        <div class="offer-card">
+        <div class="offer-card reveal reveal-delay-2">
           <h3>Premium</h3>
           <div class="offer-price">500 euro</div>
           <p class="offer-desc">
-            Pentru cei care vor un site mai avansat, cu atenție mai mare la structură și detalii.
+            Pentru afaceri care vor un site mai puternic vizual, mai premium și cu mai multă atenție la detalii.
           </p>
           <ul class="offer-features">
             <li>Mai multe pagini</li>
-            <li>Design premium</li>
+            <li>Design premium cu impact mai mare</li>
+            <li>Animații și secțiuni mai avansate</li>
             <li>Responsive complet</li>
-            <li>Secțiuni suplimentare la cerere</li>
+            <li>Aspect mai puternic pentru brand</li>
           </ul>
           <div class="offer-actions">
             <button class="offer-btn" onclick="selectPackage('Premium - 500 euro')">Alege pachetul</button>
           </div>
         </div>
 
-        <div class="offer-card">
+        <div class="offer-card reveal reveal-delay-3">
           <h3>Personalizat</h3>
           <div class="offer-price">Personalizat în buget</div>
           <p class="offer-desc">
-            Pentru proiecte speciale, cerințe diferite sau un buget stabilit de client.
+            Pentru proiecte speciale, cerințe diferite sau firme care vor o soluție adaptată exact nevoilor lor.
           </p>
           <ul class="offer-features">
-            <li>Structură adaptată nevoilor tale</li>
+            <li>Structură adaptată afacerii tale</li>
             <li>Funcționalități la cerere</li>
-            <li>Design în funcție de buget</li>
+            <li>Design în funcție de obiectiv și buget</li>
             <li>Discuție directă pentru ofertă</li>
+            <li>Abordare personalizată</li>
           </ul>
           <div class="offer-actions">
             <button class="offer-btn" onclick="selectPackage('Personalizat în buget')">Alege pachetul</button>
@@ -840,22 +1757,23 @@
 
   <section class="section" id="despre">
     <div class="container">
-      <div class="section-heading">
-        <h2>Despre noi</h2>
+      <div class="section-heading reveal">
+        <span class="section-kicker">Despre noi</span>
+        <h2>Construim site-uri pentru afaceri care vor să fie luate în serios</h2>
       </div>
 
-      <div class="about-box">
+      <div class="about-box reveal">
         <p>
-          AutoBot Innovations este echipa care se ocupă de crearea site-urilor pentru persoane,
-          branduri și afaceri care vor să arate profesionist în mediul online.
+          AutoBot Innovations este echipa care creează site-uri moderne pentru firme, branduri și afaceri
+          care vor o prezență online reală, clară și profesionistă.
         </p>
         <p>
-          Scopul nostru este să construim pagini clare, moderne și plăcute vizual,
-          fără elemente exagerate, astfel încât site-ul să inspire încredere și să fie ușor de folosit.
+          Noi credem că un site bun trebuie să facă mai mult decât să arate bine. Trebuie să inspire încredere,
+          să prezinte clar serviciile și să ajute afacerea să fie percepută la un nivel mai serios.
         </p>
         <p>
-          Fie că ai nevoie de un site simplu de prezentare sau de o variantă mai completă,
-          noi putem adapta structura în funcție de ceea ce ai nevoie.
+          Indiferent dacă pornești de la zero sau vrei un aspect mai premium pentru brandul tău,
+          noi putem construi o variantă adaptată obiectivului tău și imaginii pe care vrei să o transmiți.
         </p>
       </div>
     </div>
@@ -863,16 +1781,19 @@
 
   <section class="section" id="contact">
     <div class="container">
-      <div class="section-heading">
-        <h2>Contact</h2>
+      <div class="section-heading reveal">
+        <span class="section-kicker">Contact</span>
+        <h2>Discutăm direct și găsim varianta potrivită</h2>
         <p class="section-subtext">
-          Dacă vrei un site pentru afacerea ta, discutăm direct și stabilim varianta potrivită.
+          Dacă vrei un site pentru afacerea ta sau vrei să îți îmbunătățești imaginea online,
+          ne poți scrie direct.
         </p>
       </div>
 
-      <div class="contact-box">
+      <div class="contact-box reveal">
         <p>
           Completează formularul de mai jos, iar cererea ta va fi trimisă direct pe WhatsApp.
+          Astfel putem discuta rapid despre afacerea ta, pachetul potrivit și direcția site-ului.
         </p>
 
         <div class="contact-grid">
@@ -882,8 +1803,8 @@
           </div>
 
           <div class="contact-item">
-            <h4>Tip servicii</h4>
-            <p>Site-uri de prezentare, pagini pentru servicii, site-uri moderne pentru afaceri</p>
+            <h4>Servicii</h4>
+            <p>Site-uri de prezentare, pagini pentru servicii, prezență online premium pentru afaceri</p>
           </div>
 
           <div class="contact-item">
@@ -897,18 +1818,19 @@
 
   <section class="contact-lead-section" id="formular">
     <div class="container">
-      <div class="lead-box">
+      <div class="lead-box reveal">
         <div class="lead-left">
-          <span class="lead-kicker">VREI UN SITE PROFESIONAL?</span>
+          <span class="lead-kicker">Vrei mai mulți clienți și o imagine mai serioasă?</span>
           <h2>Trimite detaliile tale și discutăm direct pe WhatsApp</h2>
           <p>
-            Completează formularul, iar mesajul va fi pregătit automat și trimis către WhatsApp,
-            ca să putem discuta mai rapid despre proiectul tău.
+            Dacă afacerea ta are nevoie de un site care să arate modern, să transmită încredere și
+            să te prezinte mai bine în online, completează formularul și intrăm direct în discuție.
           </p>
 
           <div class="lead-contact-info">
             <p><strong>WhatsApp:</strong> 0768917999</p>
             <p><strong>Program:</strong> Luni – Vineri • 09:00 – 18:00</p>
+            <p><strong>Scop:</strong> Site profesional, imagine premium, mai multă încredere pentru client</p>
           </div>
         </div>
 
@@ -928,7 +1850,7 @@
 
             <textarea
               id="message"
-              placeholder="Scrie pe scurt ce fel de site îți dorești"
+              placeholder="Scrie pe scurt ce fel de site îți dorești și ce vrei să obții prin el"
               required
             ></textarea>
 
@@ -956,14 +1878,14 @@
       const themeIcon = document.getElementById("theme-icon");
       const themeText = document.getElementById("theme-text");
 
-      body.classList.toggle("dark-theme");
+      body.classList.toggle("light-theme");
 
-      if (body.classList.contains("dark-theme")) {
-        localStorage.setItem("theme", "dark");
+      if (body.classList.contains("light-theme")) {
+        localStorage.setItem("theme", "light");
         themeIcon.textContent = "☀️";
         themeText.textContent = "Light";
       } else {
-        localStorage.setItem("theme", "light");
+        localStorage.setItem("theme", "dark");
         themeIcon.textContent = "🌙";
         themeText.textContent = "Dark";
       }
@@ -975,13 +1897,13 @@
       const themeText = document.getElementById("theme-text");
 
       if (savedTheme === "light") {
-        document.body.classList.remove("dark-theme");
-        themeIcon.textContent = "🌙";
-        themeText.textContent = "Dark";
-      } else {
-        document.body.classList.add("dark-theme");
+        document.body.classList.add("light-theme");
         themeIcon.textContent = "☀️";
         themeText.textContent = "Light";
+      } else {
+        document.body.classList.remove("light-theme");
+        themeIcon.textContent = "🌙";
+        themeText.textContent = "Dark";
       }
     }
 
@@ -1003,7 +1925,7 @@
       const message = document.getElementById("message").value.trim();
 
       const whatsappMessage =
-`Bună! Sunt interesat(ă) de un site.
+`Bună! Sunt interesat(ă) de un site pentru afacerea mea.
 
 Nume: ${name}
 Email: ${email}
@@ -1019,7 +1941,24 @@ ${message}`;
       window.open(whatsappURL, "_blank");
     });
 
+    function initRevealAnimations() {
+      const revealElements = document.querySelectorAll(".reveal");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+          }
+        });
+      }, {
+        threshold: 0.14
+      });
+
+      revealElements.forEach(el => observer.observe(el));
+    }
+
     loadTheme();
+    initRevealAnimations();
   </script>
 </body>
 </html>
